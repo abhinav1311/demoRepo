@@ -1,3 +1,5 @@
+Throughout the year, I have made significant contributions towards fulfilling the objectives of our team, business/function, and the company. Here are some noteworthy accomplishments and behaviors:
+
 Upgrading to JDK 17: As the project lead, I successfully oversaw the upgrade to JDK 17. This upgrade not only met but exceeded expectations, ensuring that our systems are up to date and secure. It contributed to improved system performance and security, thus enhancing our team's and the company's overall success.
 
 NADC Phase 1 and Phase 2: I also played a critical role in the successful execution of NADC Phase 1 and Phase 2. This involved [specific achievements in Phase 1] and [specific achievements in Phase 2]. These accomplishments exceeded performance expectations, positively impacting our team's and the company's success.
