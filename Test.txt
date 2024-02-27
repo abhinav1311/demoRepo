@@ -1,29 +1,11 @@
-Hi Team,
+clear-host
+Echo "Keep alive with scroll lock"
 
-I'm writing to provide an update on the progress of the Kafka Proof of Concept (POC).
-
-Java Side:
-
-We have successfully completed testing Java connectivity with the configured id setup. This includes producer and consumer applications successfully sending and receiving messages through the Kafka cluster.
-All necessary configurations have been verified and are functioning as expected.
-
-Side:
-
-The ID setup on the side is complete. This ensures secure communication between Athena and Kafka.
-Elena is currently working on testing the Athena-side code scripts. This involves integration with Kafka and processing of received messages.
-Overall:
-
-The POC is progressing well, with key milestones achieved for the Java side and initial setup completed on the Athena side. Further development and testing efforts are ongoing on the Athena code scripts.
-
-Next Steps:
-
-Elena will continue testing and refining the Athena-side code scripts.
-We will perform integrated testing between the Java and Athena components once the scripts are ready.
-We will document the progress and findings throughout the process.
-Timeline:
-
-We are currently on track to achieve the POC goals within the planned timeframe. We will keep you updated on any further developments or adjustments to the schedule.
-
-Please let me know if you have any questions or require further information.
-
-Regards,
+$WShell = New-Object -com "WScript.shell"
+while ($True)
+{
+  $WShell.sendkeys("{SCROLLLOCK}")
+  start-sleep -Milliseconds 100
+  $WShell.sendkeys("{SCROLLLOCK}")
+  start-sleep -Seconds 240
+}
