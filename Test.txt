@@ -1,11 +1,22 @@
-clear-host
-Echo "Keep alive with scroll lock"
+def safe_split(col_name, sep='_'):
+  """
+  Safely splits a column name based on a separator, handling cases with 
+  and without underscores.
+  """
+  parts = col_name.split(sep)
+  if len(parts) == 1:
+    return col_name  # No separator found, return original name
+  elif len(parts) == 2:
+    return parts[1]  # Single underscore, return part after separator
+  else:
+    # Multiple underscores, return everything after the first underscore
+    return  parts[2]
 
-$WShell = New-Object -com "WScript.shell"
-while ($True)
-{
-  $WShell.sendkeys("{SCROLLLOCK}")
-  start-sleep -Milliseconds 100
-  $WShell.sendkeys("{SCROLLLOCK}")
-  start-sleep -Seconds 240
-}
+# Flatten the dictionary with specifying separators for multi-level keys
+df = pd.json_normalize(d, sep='_')
+
+# Extract the first key (date) and add it as 'releasedate' column
+df['releasedate'] = list(d.keys())[0]  # Access the first key from the dictionary
+
+# Rename columns with error handling
+df.rename(columns=safe_split, inplace=True)
