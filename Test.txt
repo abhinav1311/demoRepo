@@ -1,22 +1,46 @@
-def safe_split(col_name, sep='_'):
-  """
-  Safely splits a column name based on a separator, handling cases with 
-  and without underscores.
-  """
-  parts = col_name.split(sep)
-  if len(parts) == 1:
-    return col_name  # No separator found, return original name
-  elif len(parts) == 2:
-    return parts[1]  # Single underscore, return part after separator
-  else:
-    # Multiple underscores, return everything after the first underscore
-    return  parts[2]
 
-# Flatten the dictionary with specifying separators for multi-level keys
-df = pd.json_normalize(d, sep='_')
 
-# Extract the first key (date) and add it as 'releasedate' column
-df['releasedate'] = list(d.keys())[0]  # Access the first key from the dictionary
+Conversation with Gemini
 
-# Rename columns with error handling
-df.rename(columns=safe_split, inplace=True)
+What is reference data in finra for tba
+
+
+Show drafts
+
+Reference Data in FINRA for TBA
+Reference data in FINRA for TBA (To-Be-Announced) securities is essentially a collection of standardized information about these securities, used for identification, analysis, and reporting purposes. This data is crucial for market participants to understand and trade TBAs effectively.
+
+Key Components of Reference Data for TBA
+Security Identification:
+
+CUSIP (Committee on Uniform Security Identification Procedures)
+FINRA Symbol
+Issue Date
+Maturity Date
+Coupon Rate
+Issue Size
+Security Characteristics:
+
+Mortgage Type (Agency, Conforming, Non-Conforming)
+Loan Age
+Credit Score
+Geographic Location
+Prepayment Speed
+Pricing and Valuation Data:
+
+Current Price
+Yield
+Price Volatility
+Credit Rating
+Prepayment Model
+Trade and Settlement Data:
+
+Trade Volume
+Trade Price
+Settlement Date
+Delivery Instructions
+Importance of Reference Data for TBA
+Market Transparency: Provides clear and consistent information about TBA securities, enhancing market liquidity and efficiency.
+Risk Management: Enables accurate risk assessment and pricing of TBA positions.
+Regulatory Compliance: Supports FINRA's regulatory requirements for reporting and transparency.
+Trade Execution: Facilitates efficient trading and settlement of TBA securities
